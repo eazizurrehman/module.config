@@ -1,0 +1,17 @@
+pre-commit:
+  commands:
+    ts:check:
+      run: pn ts:check
+      stage_fixed: true
+    biome:check:
+      run: pn biome:check
+      stage_fixed: true
+    file:size:check:
+      run: pn file:size:check
+      stage_fixed: true
+    build:
+      run: pn build
+    branch:protect:
+      run: ./.config/branch:protect.sh
+      skip:
+        - merge
