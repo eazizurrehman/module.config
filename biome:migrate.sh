@@ -8,4 +8,4 @@ CONFIG_PATH="$PWD/.config/biome.json"
 
 require_file "$CONFIG_PATH"
 
-biome migrate --config-path "$CONFIG_PATH" --write --no-errors-on-unmatched --files-ignore-unknown=true
+pnx @biomejs/biome migrate --config-path "$CONFIG_PATH" --write --no-errors-on-unmatched
