@@ -4,7 +4,7 @@
 
 MAX_SIZE=$((1024*1024*1)) # 1MB
 
-ALL_FILES=$(git ls-files)
+ALL_FILES=$(git ls-files ':!:public/*')
 
 for file in $ALL_FILES; do
   if [ -f "$file" ]; then
